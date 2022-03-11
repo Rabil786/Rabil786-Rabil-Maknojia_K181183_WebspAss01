@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.decorate{
+    color: blueviolet;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: -3px;
+}
+
+.decorate:hover{
+    color:rgba(19, 35, 47, 0.9);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h2{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  font-family: 'Titillium Web', sans-serif;
+  height: 310px;
+  column-rule-style: solid;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #eee;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: white;
+  padding: 50px;
+  max-width: 450px;
+  max-height: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 1rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: black;
+  font-weight:400px;
+  padding-top: 5px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  margin-left: 1px;
+}
+
+.forgot {
+  margin-top: -5px;
+  text-align: right;
+}
+</style>
+</head>
+<body translate="no" >
+    <ul class="head">
+        <li class="In_Head"><a href="Index.html">Home Star</a></li>
+        <li class="In_Head"><a href="Browse Categories.html">Browse Categories</a></li>
+        <li class="In_Head"><a href="blog.html">Blog</a></li>
+        <li class="In_Head"><a href="Write a Review.html">Write a Review</a></li>
+        <li class="In_Head"><a href="Get Quote.html">Get Quote</a></li>
+        <li class="In_reg"><a style="background-color: yellow;" href="Homestar Pro.html">ARE YOU A HOME PRO?</a></li>
+        <li class="In_reg"><a href="Sign Up.html">Sign Up</a></li>
+        <li class="In_reg" class="tab active"><a href="Login.html">Login</a></li> 
+    </ul>
+
+    <h1 style="text-align: center; color: black; margin-top: 20px; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">Service Providers in Toronto, Ontario</h1>   
+    <h1 style="text-align: center; color: black; margin-top: 3%; margin-left: 0%; font-size: 16px; font-weight: bold; font-family: 'Titillium Web', sans-serif;">Looking for a trusted company in Toronto for your next home improvement project? Choose from thousands of verified and reviewed home service pros that are eager to help.</h1>   
+
+    <div class="row">
+      <div class="column" style="background-color:#fff;">
+        <h2>Addition, Construction & Renovations</h2>
+        <p><a class="decorate" href="#">Basement Renovation</a></p>
+        <p><a class="decorate" href="#">Bathroom Renovation</a></p>
+        <p><a class="decorate" href="#">Decks</a></p>
+        <p><a class="decorate" href="#">Demolition</a></p>
+        <p><a class="decorate" href="#">Home Inspection</a></p>
+        <p><a class="decorate" href="#">Home Additions</a></p>
+        <p><a class="decorate" href="#">Home Office Renovation</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Green Home Improvement</h2>
+        <p><a class="decorate" href="#">Electrical Vehicle Charging</a></p>
+        <p><a class="decorate" href="#">Renewable Energy</a></p>
+        <p><a class="decorate" href="#">Solar Panels</a></p>
+        <p><a class="decorate" href="#">Solar water Heating</a></p>
+        <p><a class="decorate" href="#">Green Products & Services</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Architects, Builder & Engineers</h2>
+        <p><a class="decorate" href="#">Architect</a></p>
+        <p><a class="decorate" href="#">Drafting Services</a></p>
+        <p><a class="decorate" href="#">Design/Build</a></p>
+        <p><a class="decorate" href="#">Builders</a></p>
+        <p><a class="decorate" href="#">Concrete Contractors</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Handyman Services</h2>
+        <p><a class="decorate" href="#">Appliance Repair</a></p>
+        <p><a class="decorate" href="#">Electricians</a></p>
+        <p><a class="decorate" href="#">Lighting</a></p>
+        <p><a class="decorate" href="#">Painting</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Landscape, Yard & Garden</h2>
+        <p><a class="decorate" href="#">Decks</a></p>
+        <p><a class="decorate" href="#">Excavation</a></p>
+        <p><a class="decorate" href="#">Fences & Gates</a></p>
+        <p><a class="decorate" href="#">Concrete Contractors</a></p>
+        <p><a class="decorate" href="#">BBQ Equipment & Services</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Heating & Furnances</h2>
+        <p><a class="decorate" href="#">Fireplaces</a></p>
+        <p><a class="decorate" href="#">Gas Line Installation</a></p>
+        <p><a class="decorate" href="#">Heating & Air Conditioning</a></p>
+        <p><a class="decorate" href="#">Fireplace Mantels</a></p>
+        <p><a class="decorate" href="#">Duct Cleaning</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Carpentry & Woodworking</h2>
+        <p><a class="decorate" href="#">Decks</a></p>
+        <p><a class="decorate" href="#">Carpenters</a></p>
+        <p><a class="decorate" href="#">Cabinetry & Millwork</a></p>
+        <p><a class="decorate" href="#">Closet & Storage</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Cleaning Services</h2>
+        <p><a class="decorate" href="#">Duct Cleaning</a></p>
+        <p><a class="decorate" href="#">House Cleaning</a></p>
+        <p><a class="decorate" href="#">Apartment Cleaning</a></p>
+        <p><a class="decorate" href="#">House Cleaning Exterior</a></p>
+        <p><a class="decorate" href="#">Drapery</a></p>
+        <p><a class="decorate" href="#">Blinds Cleaning</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Organziation, Moving & Storage</h2>
+        <p><a class="decorate" href="#">Self Storage</a></p>
+        <p><a class="decorate" href="#">Moving & Storage</a></p>
+        <p><a class="decorate" href="#">Closet & Storage</a></p>
+        <p><a class="decorate" href="#">Piano Moving</a></p>
+        <p><a class="decorate" href="#">Junk Removal</a></p>
+
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Plumbing</h2>
+        <p><a class="decorate" href="#">Sprinkler System</a></p>
+        <p><a class="decorate" href="#">Drainage Contractors</a></p>
+        <p><a class="decorate" href="#">Excavation</a></p>
+        <p><a class="decorate" href="#">Plumbing</a></p>
+        <p><a class="decorate" href="#">Septic Tank Cleaning</a></p>
+        <p><a class="decorate" href="#">Repair & Installation</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Chimney Build & Repair</h2>
+        <p><a class="decorate" href="#">Chimney Build & Repair</a></p>
+        <p><a class="decorate" href="#">Chimney Sweeps</a></p>
+        <p><a class="decorate" href="#">Interlocking Stone</a></p>
+        <p><a class="decorate" href="#">Masonry & Bricklaying</a></p>
+        <p><a class="decorate" href="#">Tuck Pointing</a></p>
+        <p><a class="decorate" href="#">Waterproofing</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Decorators & Designers</h2>
+        <p><a class="decorate" href="#">Game Rooms, Entertainment</a></p>
+        <p><a class="decorate" href="#">Garage Design & Organization</a></p>
+        <p><a class="decorate" href="#">Home Staging</a></p>
+        <p><a class="decorate" href="#">Interior Decorators</a></p>
+        <p><a class="decorate" href="#">Interior Design</a></p>
+        <p><a class="decorate" href="#">Cabinet Design</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Roofing</h2>
+        <p><a class="decorate" href="#">Roofing Gutters & Eavestroughs</a></p>
+        <p><a class="decorate" href="#">Roofing</a></p>
+        <p><a class="decorate" href="#">Skylight Installation & Repair</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Windows & Doors</h2>
+        <p><a class="decorate" href="#">Windows & Doors</a></p>
+        <p><a class="decorate" href="#">Awnings & Canopies</a></p>
+        <p><a class="decorate" href="#">Blinds Cleaning & Repairing</a></p>
+        <p><a class="decorate" href="#">Drapery & Upholstery Cleaning</a></p>
+        <p><a class="decorate" href="#">Locks & Locksmiths</a></p>
+        <p><a class="decorate" href="#">Mirros & Glass</a></p>
+        <p><a class="decorate" href="#">Shutter & Blinds</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Furniture</h2>
+        <p><a class="decorate" href="#">Furniture</a></p>
+        <p><a class="decorate" href="#">Furniture Designers & Custom Builders</a></p>
+        <p><a class="decorate" href="#">Furniture Refinish & Repair</a></p>
+        <p><a class="decorate" href="#">Furniture Rental</a></p>
+        <p><a class="decorate" href="#">Home Staging</a></p>
+        <p><a class="decorate" href="#">Upholsterers</a></p>
+      </div>
+      <div class="column" style="background-color:#fff;">
+        <h2>Safety</h2>
+        <p><a class="decorate" href="#">Alarm Systems</a></p>
+        <p><a class="decorate" href="#">Asbestos, Lead, and Radon Removal</a></p>
+        <p><a class="decorate" href="#">Home Inspection</a></p>
+        <p><a class="decorate" href="#">Mold Detection & Removal</a></p>
+        <p><a class="decorate" href="#">Pest & Animal Control</a></p>
+      </div>
+    </div>
+</body>
+</html>
+ 

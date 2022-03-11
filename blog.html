@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.decorate{
+    color: blueviolet;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: -3px;
+}
+
+.decorate:hover{
+    color:rgba(19, 35, 47, 0.9);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h2{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  font-family: 'Titillium Web', sans-serif;
+  height: 310px;
+  column-rule-style: solid;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img{
+    width: 105%; 
+    height: 70%
+}
+
+h2{
+  font-family: 'Titillium Web', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h3{
+  font-family: 'Titillium Web', sans-serif;
+  color:grey;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #fff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: white;
+  padding: 50px;
+  max-width: 450px;
+  max-height: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 1rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: black;
+  font-weight:400px;
+  padding-top: 5px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  color: black;
+  font-size: 18px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  margin-left: 1px;
+}
+
+.forgot {
+  margin-top: -5px;
+  text-align: right;
+}
+</style>
+
+</head>
+<body translate="no" >
+    <ul class="head">
+        <li class="In_Head"><a href="Index.html">Home Star</a></li>
+        <li class="In_Head"><a href="Browse Categories.html">Browse Categories</a></li>
+        <li class="In_Head"><a href="blog.html">Blog</a></li>
+        <li class="In_Head"><a href="Write a Review.html">Write a Review</a></li>
+        <li class="In_Head"><a href="Get Quote.html">Get Quote</a></li>
+        <li class="In_reg"><a style="background-color: yellow;" href="Homestar Pro.html">ARE YOU A HOME PRO?</a></li>
+        <li class="In_reg"><a href="Sign Up.html">Sign Up</a></li>
+        <li class="In_reg" class="tab active"><a href="Login.html">Login</a></li> 
+    </ul>
+
+    
+<div class="row">
+  <h1 style="text-align: center; color: black; margin-top: 20px; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">DESIGN</h1>
+  <h1 style="text-align: center; color: black; margin-top: -5%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">________________</h1>   
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/contact.jpg">
+    <h2>Addition, Construction & Renovations</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image10.png">
+    <h2>5 Creative Ways to Use Pantone Colors of the Year 2022</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image9.jpg">
+    <h2>7 Pet Owner Approved Renovations Project Ideas</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image8.png">
+    <h2>5 Creative Ways to Design Kitchen Cabinets</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+
+  <h1 style="text-align: center; color: black; margin-top: 30%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">LIFESTYLE</h1>
+  <h1 style="text-align: center; color: black; margin-top: -5%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">__________________</h1>   
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image7.jpg">
+    <h2>7 Pet Owner Approved Renovations Project Ideas</h2>
+    <h3>by Rabil Maknojia | Feb-11-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image6.png">
+    <h2>Addition, Construction & Renovations</h2>
+    <h3>by Rabil Maknojia | Feb-05-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image5.jpg">
+    <h2>5 Creative Ways to Design Kitchen Cabinets</h2>
+    <h3>by Rabil Maknojia | Feb-09-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image4.png">
+    <h2>7 Pet Owner Approved Renovations Project Ideas</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+
+  <h1 style="text-align: center; color: black; margin-top: 30%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">IMPROVEMENT</h1>
+  <h1 style="text-align: center; color: black; margin-top: -5%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">_____________________</h1>   
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image3.jpg">
+    <h2>5 Creative Ways to Use Pantone Colors of the Year 2022</h2>
+    <h3>by Rabil Maknojia | Aug-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image2.jpg">
+    <h2>5 Creative Ways to Design Kitchen Cabinets</h2>
+    <h3>by Rabil Maknojia | Jun-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image11.png">
+    <h2>5 Creative Ways to Use Pantone Colors of the Year 2022</h2>
+    <h3>by Rabil Maknojia | Jul-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image12.png">
+    <h2>Addition, Construction & Renovations</h2>
+    <h3>by Rabil Maknojia | Dec-01-2022</h3>
+  </div>
+
+  <h1 style="text-align: center; color: black; margin-top: 30%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">HOME UPDATES</h1>
+  <h1 style="text-align: center; color: black; margin-top: -5%; margin-left: 0.2%; font-size: 36px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">______________________</h1>   
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image13.png">
+    <h2>5 Creative Ways to Use Pantone Colors of the Year 2022</h2>
+    <h3>by Rabil Maknojia | Feb-07-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image14.png">
+    <h2>7 Pet Owner Approved Renovations Project Ideas</h2>
+    <h3>by Rabil Maknojia | Apr-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image15.png">
+    <h2>5 Creative Ways to Design Kitchen Cabinets</h2>
+    <h3>by Rabil Maknojia | Mar-01-2022</h3>
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+    <img src="./Images/image16.png">
+    <h2>Addition, Construction & Renovations</h2>
+    <h3>by Rabil Maknojia | Feb-01-2022</h3>
+  </div>
+</div>
+</body>
+</html>
+ 

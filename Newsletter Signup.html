@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: white;
+  padding: 50px;
+  max-width: 450px;
+  max-height: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 1rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  left: 13px;
+  color: black;
+  font-weight:400px;
+  padding-top: 5px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  font-size: 18px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: black;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  margin-left: 1px;
+}
+
+.forgot {
+  margin-top: -5px;
+  text-align: right;
+}
+</style>
+</head>
+<body translate="no" >
+    <ul class="head">
+        <li class="In_Head"><a href="Index.html">Home Star</a></li>
+        <li class="In_Head"><a href="Browse Categories.html">Browse Categories</a></li>
+        <li class="In_Head"><a href="blog.html">Blog</a></li>
+        <li class="In_Head"><a href="Write a Review.html">Write a Review</a></li>
+        <li class="In_Head"><a href="Get Quote.html">Get Quote</a></li>
+        <li class="In_Head"><a href="Contact Us.html">Contact Us</a></li>
+        <li class="In_reg"><a style="background-color: yellow;" href="#">ARE YOU A HOME PRO?</a></li>
+        <li class="In_reg"><a href="Sign Up.html">Sign Up</a></li>
+        <li class="In_reg" class="tab active"><a href="Login.html">Login</a></li> 
+    </ul>
+
+    <h1 style="text-align: center; color: black; margin-top: 20px; margin-left: 0.2%; font-size: 40px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">Hire Right the First Time.</h1>   
+    <h1 style="text-align: center; color: black; margin-top: -3%; margin-left: 1%; font-size: 18px; font-weight: 800; font-family: 'Titillium Web', sans-serif;">Take control of your projects with help from HomeStars</h1>   
+    <h1 style="text-align: center; color: black; margin-top: 3%; margin-left: -2%; font-size: 20px; font-weight: 20; font-family: 'Titillium Web', sans-serif;">Project cost guides</h1><br>
+    <h1 style="text-align: center; color: black; margin-top: -3%; margin-left: -2%; font-size: 20px; font-weight: 100; font-family: 'Titillium Web', sans-serif;">Hiring tips</h1><br> 
+    <h1 style="text-align: center; color: black; margin-top: -3%; margin-left: 0%; font-size: 20px; font-weight: 100; font-family: 'Titillium Web', sans-serif;">Seasonal maintenance reminders</h1>
+        <div class="form">        
+              <div class="tab-content">
+                <div id="signup">   
+                  <form action="/" method="post">
+                    <div class="field-wrap">
+                        <input type="text"required / placeholder="First Name*">
+                    </div>
+
+                    <div class="field-wrap">
+                        <input type="text"required / placeholder="Last Name*">
+                    </div>
+
+                    <div class="field-wrap">
+                        <input type="email"required / placeholder="Email*">
+                    </div>
+                    <p><a href="#" style="margin-left: -15px; padding: 15px; padding-left: -5px;">By signing up to the HomeStars newsletter you accept the<b> terms of use.</b></a></p>
+                    <button class="button button-block"/ style="background-color: rgba(19, 35, 47, 0.9); ">Sign Up</button>
+                  </form>
+                </div>
+                <div id="login"> 
+                </div>
+              </div><!-- tab-content -->
+        </div> <!-- /form -->
+</body>
+</html>
+ 

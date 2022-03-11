@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+body{
+    background-color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.align{
+    margin-left: -40px;
+    color: black;
+}
+
+h1 {
+  text-align: left;
+  color: #ffffff;
+  font-weight: 15px;
+  font-size: 20px;
+  margin-left: -3px;
+}
+
+.settext{
+    margin-left: 40%;
+    color: black;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: white;
+  padding: 50px;
+  max-width: 600px;
+  max-height: 300px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 1rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+.set{
+  position: absolute;
+  -webkit-transform: translateY(8px); transform: translateY(15px);
+  left: 13px;
+  color: black;
+  font-weight:400px;
+  padding-right: 100%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  margin-left: 1px;
+}
+
+.button-block1 {
+  display: block;
+  width: 20%;
+  margin-left: 40%;
+  color: white;
+}
+
+.button-block1 :hover {
+  color: yellowgreen;
+}
+
+.forgot {
+  margin-top: -5px;
+  text-align: right;
+}
+
+</style>
+<body>
+    <ul class="head">
+        <li class="In_Head"><a href="Index.html">Home Star</a></li>
+        <li class="In_Head"><a href="Browse Categories.html">Browse Categories</a></li>
+        <li class="In_Head"><a href="Get Quote.html">Blog</a></li>
+        <li class="In_Head"><a href="Write a Review.html">Write a Review</a></li>
+        <li class="In_reg"><a style="background-color: yellow;" href="Homestar Pro.html">ARE YOU A SERVICE PRO?</a></li>
+        <li class="In_reg"><a href="Sign Up.html">Sign Up</a></li>
+        <li class="In_reg" class="tab active"><a href="Login.html">Login</a></li> 
+    </ul>
+
+<div class="form">        
+    <div class="tab-content">
+      <div id="signup">   
+        <form action="/" method="post">
+            <form style="background-color: white;">
+                <h1 style="color: black;">What do you need done?</h1><br>
+                    <input class="align" type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">Clean Roof</label><br><br>
+                    <input class="align" type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">Flat, Foam, or Single Ply Roofing Install </label><br><br>
+                    <input class="align" type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">Install Asphalt Shingle Roofing </label><br><br>
+                    <input class="align" type="radio" id="css" name="fav_language" value="css">
+                    <label for="css">Install Metal Roofing </label><br><br>
+            </form> 
+            <br><br>
+        </form>
+      </div>
+      <div id="login"> 
+      </div>
+    </div>
+</div>
+
+<div class="form">        
+    <div class="tab-content">
+      <div id="signup">   
+        <form action="/" method="post">
+            <form style="background-color: white;">
+                <h1 style="color: black;">What is the nature of this project?</h1><br>
+                  <input class="align" type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">Completely replace roof</label><br><br>
+                  <input class="align" type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">Install roof on new construction</label><br><br>
+                  <input class="align" type="radio" id="javascript" name="fav_language" value="JavaScript">
+                  <label for="javascript">Repair existing roof</label>
+            </form> 
+            <br><br>
+        </form>
+      </div>
+      <div id="login"> 
+      </div>
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<div class="form">        
+    <div class="tab-content">
+      <div id="signup">   
+        <form action="/" method="post">
+            <form style="background-color: white;">
+                <h1 style="color: black;">Choose the appropriate status for this project?</h1><br>
+                <select name="Category id="categories" style=" font-family: 'Titillium Web', sans-serif; font-size: 110%; padding-top: 8px; padding-bottom: 7px; padding-left: 7px; padding-right: 154px;">
+                    <option>Choose One<span class="req">*</span></option>
+                    <option>Ready to Hire</option>
+                    <option>Planning & Budgeting</option>
+                </select>
+            </form> 
+            <br><br>
+        </form>
+      </div>
+      <div id="login"> 
+      </div>
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<div class="form">        
+    <div class="tab-content">
+      <div id="signup">   
+        <form action="/" method="post">
+            <form style="background-color: white;">
+                <h1 style="color: black;">How many stories is your home?</h1><br>
+                <select name="Category id="categories" style=" font-family: 'Titillium Web', sans-serif; font-size: 110%; padding-top: 8px; padding-bottom: 7px; padding-left: 6px; padding-right: 154px;">
+                    <option>Choose One<span class="req">*</span></option>
+                    <option>One Story</option>
+                    <option>Two Stories</option>
+                    <option>Three Stories or More</option>
+                </select>
+            </form> 
+            <br><br>
+        </form>
+      </div>
+      <div id="login"> 
+      </div>
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<div class="form">        
+    <div class="tab-content">
+      <div id="signup">   
+        <form action="/" method="post">
+            <form style="background-color: white;">
+                <h1 style="color: black;">Is this location a historical structure?</h1><br>
+                  <input class="align" type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">Yes</label><br><br>
+                  <input class="align" type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">No</label><br>
+            </form> 
+            <br><br>
+        </form>
+      </div>
+      <div id="login"> 
+      </div>
+    </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<div class="form">        
+  <div class="tab-content">
+    <div id="signup">   
+      <form action="/" method="post">
+          <form style="background-color: white;">
+              <h1 style="color: black;">How many stories is your home?</h1><br>
+              <select name="Category id="categories" style=" font-family: 'Titillium Web', sans-serif; font-size: 110%; padding-top: 8px; padding-bottom: 7px; padding-left: 6px; padding-right: 154px;">
+                  <option>Choose One<span class="req">*</span></option>
+                  <option>Timing is flexible</option>
+                  <option>Less than 2 months</option>
+                  <option>More than 2 months</option>
+              </select>
+          </form> 
+          <br><br>
+      </form>
+    </div>
+    <div id="login"> 
+    </div>
+  </div><!-- tab-content -->
+</div> <!-- /form -->
+
+<div class="form">        
+  <div class="tab-content">
+    <div id="signup">   
+      <form action="/" method="post">
+          <form style="background-color: white;">
+              <h1 style="color: black;">Are you the owner or authorized to make property changes?</h1><br>
+                <input class="align" type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">Yes</label><br><br>
+                <input class="align" type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">No</label><br>
+          </form> 
+          <br><br>
+      </form>
+    </div>
+    <div id="login"> 
+    </div>
+  </div><!-- tab-content -->
+</div> <!-- /form -->
+<button class="button button-block1" style="background-color: rgba(19, 35, 47, 0.9);;"><a href = "#">Get Quote</a></button>
+</body>
+</html>
+
